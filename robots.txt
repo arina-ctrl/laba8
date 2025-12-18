@@ -4,4 +4,8 @@ Disallow: /css/
 Disallow: /js/
 Disallow: /images/
 
+# Разрешаем индексацию всего остального содержимого
+Allow: /
+
+# Указываем путь к карте сайта
 Sitemap: https://ваш-ник.github.io/cat-paradise/sitemap.xml
