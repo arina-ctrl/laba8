@@ -203,9 +203,10 @@ main {
 }
 
 /* Галерея */
+/* Стили для галереи с фотографиями */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
     margin-bottom: 3rem;
 }
@@ -215,29 +216,90 @@ main {
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 8px 20px rgba(255, 105, 180, 0.3);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cat-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(255, 105, 180, 0.4);
 }
 
 .cat-image {
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 3px solid #ffb6c1;
 }
 
-.cat-card h3 {
+.cat-card h2 {
     padding: 1rem 1rem 0.5rem;
     color: #ff1493;
+    font-size: 1.5rem;
 }
 
 .cat-card p {
-    padding: 0 1rem 1.5rem;
+    padding: 0 1rem 1rem;
     color: #666;
+    line-height: 1.5;
+}
+
+.cat-details {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 1rem;
+    background-color: #fff5f7;
+    border-top: 1px solid #ffd1dc;
+    margin-top: 0.5rem;
+}
+
+.cat-breed, .cat-age {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #ff69b4;
+    font-size: 0.9rem;
+}
+
+/* Секция с информацией о породах */
+.breed-info {
+    background: linear-gradient(135deg, #fff0f5, #ffe4ec);
+    padding: 2rem;
+    border-radius: 20px;
+    margin-top: 3rem;
+}
+
+.breed-info h2 {
+    color: #ff1493;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.info-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(255, 182, 193, 0.3);
+}
+
+.info-card h3 {
+    color: #ff69b4;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-card p {
+    color: #555;
+    line-height: 1.5;
 }
 
 /* Контакты */
@@ -332,4 +394,5 @@ footer p {
     .hero p {
         font-size: 1rem;
     }
+
 }
