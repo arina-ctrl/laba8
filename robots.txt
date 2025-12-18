@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /css/
+Disallow: /js/
+Disallow: /images/
+
+Sitemap: https://ваш-ник.github.io/cat-paradise/sitemap.xml
